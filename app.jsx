@@ -1,0 +1,34 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import Inicio from './inicio.jsx';
+import Catalogo from './catalogo.jsx';
+
+class App extends React.Component{
+
+constructor(){
+super()
+this.state = {
+	mensaje1: 'Bienvenido a REActJS',
+	mensaje2: 'Otro mensaje'
+}
+} // FIN CONSTRUCTOR
+
+    render(){
+        return(
+        <Router>
+            <div>
+	            <Switch>
+               	<Route exact path='/' component={Inicio} />
+               	<Route path='/catalogo' component={Catalogo} />
+               </Switch>
+              </div>
+            </Router> 
+              
+            );
+        } // FIN RENDER
+        
+        
+      } // FIN CLASE
+
+export default App;

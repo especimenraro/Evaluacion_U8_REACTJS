@@ -1,0 +1,28 @@
+import React from 'react';
+import Producto from './producto.jsx'
+
+class galeria extends React.Component{
+	constructor(){
+		super()
+	} // FIN CONSTRUCTOR
+	
+    render(){
+    
+        return(
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 ">
+								<div class="contenedor-galeria">
+									<Producto />
+								</div>
+							</div>
+						</div>	
+					</div>	
+					
+              );
+        } // FIN RENDER
+        
+      } // FIN CLASE
+
+export default galeria;
