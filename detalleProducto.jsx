@@ -1,10 +1,37 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
-class detalle extends React.Component{
+import * as request from 'superagent';
+
+class Detalle extends React.Component{
 	constructor(){
 		super()
+		this.state = {datos:{},producto:{}}
 	} // FIN CONSTRUCTOR
-	
+	/*
+	componentWillMount() {
+			request 
+				.get('https://tienda-57b3d.firebaseio.com/bodega/.json')
+				.set('Content-Type': 'application/json')
+				.end((err,res) => {
+									
+					if (err || !res.ok) {
+						console.log('Error en la comunicacion' + err.message)
+					} else {
+												
+							this.setState({
+							datos:  res.body 
+							})	
+							
+					}
+				}) // FIN .END 
+				
+				for (key in this.state.datos) {
+					if (this.state.datos[key] ==this.props.match.params.id ) {	
+							this.state.producto = 		this.state.datos[key]		
+						}		
+					}
+	} // FIN COMPONENT WILL MOUNT
+	*/
     render(){
     
         return(
@@ -14,13 +41,13 @@ class detalle extends React.Component{
 						<div className="col-lg-12 contenedor-producto-detalle">
 							<div className="row">
 								<div className="col-lg-12 ">
-									<h2>producto_nombre</h2>
+									<h2>{this.state.producto.nombre}</h2>
 									
 								</div>			
 							</div>
 							<div className="row">
 								<div className="col-lg-6 contenedor-producto-imagen">
-									<img className="img-responsive" src="./imagenesBase/ajo.jpg" alt=""/>
+									<img className="img-responsive" src={this.state.producto.imagen} alt=""/>
 								</div>		
 								<div className="col-lg-6 contenedor-producto-info">
 									<p>Precio: $producto_precio</p>
@@ -41,7 +68,9 @@ class detalle extends React.Component{
 					
               );
         } // FIN RENDER
-        
+       
+      
+	 
       } // FIN CLASE
 
-export default detalle;
+export default Detalle;

@@ -8,10 +8,7 @@ class App extends React.Component{
 
 constructor(){
 super()
-this.state = {
-	mensaje1: 'Bienvenido a REActJS',
-	mensaje2: 'Otro mensaje'
-}
+
 } // FIN CONSTRUCTOR
 
     render(){
@@ -21,6 +18,7 @@ this.state = {
 	            <Switch>
                	<Route exact path='/' component={Inicio} />
                	<Route path='/catalogo' component={Catalogo} />
+               	
                </Switch>
               </div>
             </Router> 

@@ -41,11 +41,13 @@ text-align: left;
 color: black;
 font-size: 30px;
 }
-
+.imagen-producto{
+height: 130px;
+}
 .contenedor-galeria {
 background-color: grey;
 display: flex;
-flex-flow: row;
+flex-flow: row wrap;
 
 }
 
@@ -91,6 +93,21 @@ background-color: rgba(230,230,230,1);
 	padding: 2px 2px ;
 }
 
+.contenedor-producto-detalle {
+background-color: rgba(230,230,230,1);
+}
+
+.contenedor-producto-info {
+border-left: 1px solid gray;
+}
+.contenedor-producto-botones {
+margin: 5px 5px;
+}
+
+.contenedor-producto-imagen {
+padding: 5px 5px;
+background-color: whitesmoke;
+}
 
 
 

@@ -41,11 +41,12 @@ text-align: left;
 color: black;
 font-size: 30px;
 }
-
+.imagen-producto{
+height: 130px;
+}
 .contenedor-galeria {
 background-color: grey;
-display: flex;
-flex-flow: row;
+margin-top: 20px;
 
 }
 

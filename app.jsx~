@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Inicio from './inicio.jsx';
 import Catalogo from './catalogo.jsx';
+import Carrito from './carrito.jsx';
+import Detalle from './detalleProducto.jsx';
 
 class App extends React.Component{
 
@@ -18,14 +20,10 @@ this.state = {
         return(
         <Router>
             <div>
-            <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/catalogo">About</Link></li>
-        
-      </ul>
-               <Switch>
+	            <Switch>
                	<Route exact path='/' component={Inicio} />
                	<Route path='/catalogo' component={Catalogo} />
+               	
                </Switch>
               </div>
             </Router> 
