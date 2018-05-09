@@ -33,13 +33,9 @@
 <div class="row">
 <div class="col-lg-12">
 <nav class="navbar navbar-default">
-	  
+	  <div class="container-fluid">
 	    <div class="navbar-header">
-	    
-	      <span class="navbar-brand">
-	        Catalogo de Productos
-	      </span>
-	      
+	      <span class="navbar-brand">Catalogo de Productos</span>
 	    </div>
 	    <div class="nav navbar-nav navbar-right">
 	    	<div class="input-group">
@@ -48,7 +44,7 @@
 	    	</div>
 			
 		</div>
-	  
+	  </div>
 </nav>
 </div>
 
@@ -138,8 +134,9 @@
 			</div>			
 		</div>
 		<div class="row">
-			<div class="col-lg-6 contenedor-producto-imagen">
-				<img class="img-responsive" src="./imagenesBase/ajo.jpg" alt="">
+			<div class="col-lg-6  ">
+			
+				<img  class=" center-block img-responsive thumbnail " src="./imagenesBase/ajo.jpg" alt="">
 			</div>		
 			<div class="col-lg-6 contenedor-producto-info">
 				<p>Precio: ${{producto.precio}}</p>

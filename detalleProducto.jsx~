@@ -25,7 +25,7 @@ class Detalle extends React.Component{
 								if (this.state.datos[key].nombre ==this.props.match.params.id ) {	
 										this.setState({producto: this.state.datos[key]}) 	
 										console.log(this.state.producto,this.props.match.params.id)	
-										let urlString = this.state.producto.imagen.slice(1)
+										let urlString = this.state.producto.imagen.slice(2)
 										this.setState({url: urlString})
 										console.log(this.state.url)	
 									}		
@@ -49,10 +49,9 @@ class Detalle extends React.Component{
 									
 								</div>			
 							</div>
-							<img className=" center-block imagen-producto" src="../imagenesBase/ajo.jpg" alt=""/>
 							<div className="row">
 								<div className="col-lg-6 contenedor-producto-imagen">
-									<img className="img-producto" src="../imagenesBase/ajo.jpg" alt=""/>
+									<img className="img-responsive img-producto" src={this.state.url} alt=""/>
 								</div>		
 								<div className="col-lg-6 contenedor-producto-info">
 									<p>Precio:$ {this.state.producto.precio}</p>
@@ -74,9 +73,7 @@ class Detalle extends React.Component{
               );
         } // FIN RENDER
        
-       componentDidUpdate(){
-		
-	}
+       
       
 	 
       } // FIN CLASE

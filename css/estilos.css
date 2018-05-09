@@ -106,11 +106,11 @@ margin: 5px 5px;
 .contenedor-producto-imagen {
 padding: 5px 5px;
 background-color: whitesmoke;
-height: 25vh;
+height: auto;
 }
 
 .img-producto {
-height: 25vh;
+
 }
 
 
