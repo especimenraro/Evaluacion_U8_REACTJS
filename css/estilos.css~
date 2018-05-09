@@ -46,8 +46,7 @@ height: 130px;
 }
 .contenedor-galeria {
 background-color: grey;
-display: flex;
-flex-flow: row wrap;
+margin-top: 20px;
 
 }
 
@@ -107,6 +106,7 @@ margin: 5px 5px;
 .contenedor-producto-imagen {
 padding: 5px 5px;
 background-color: whitesmoke;
+height: 25vh;
 }
 
 

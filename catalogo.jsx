@@ -26,7 +26,7 @@ class Catalogo extends React.Component{
 								</div>
 								<div className="contenedor-catalogo">
 									<Switch>
-				               	<Route path='/catalogo' component={Galeria} />
+				               	<Route exact path='/catalogo' component={Galeria} />
 				               	<Route path='/catalogo/carrito' component={Carrito} />
                					<Route path='/catalogo/detalle/:id' component={Detalle} />
 				               </Switch>
