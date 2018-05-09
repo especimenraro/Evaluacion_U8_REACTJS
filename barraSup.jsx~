@@ -11,7 +11,7 @@ class barrasup extends React.Component{
         return(
 					
 					<nav className="navbar navbar-default">
-					  <div className="container">
+					 
 					    <div className="navbar-header">
 					    
 					      <span className="navbar-brand">
@@ -21,10 +21,10 @@ class barrasup extends React.Component{
 					    </div>
 					    <ul className="nav navbar-nav navbar-right">
 							<li className="icono"><Link to='/catalogo' ><i className="fi-thumbnails"></i></Link></li>
-							<li className="icono"><Link to='/carrito'><i className="fi-shopping-cart "></i><span  className="icono">0</span></Link></li>
+							<li className="icono"><Link to='/catalogo/carrito'><i className="fi-shopping-cart "></i><span  className="icono">0</span></Link></li>
 							<li className="icono"><Link to='/'><i className="fi-arrow-right"></i></Link></li>
 						</ul>
-					  </div>
+					  
 				</nav>
 				
 				

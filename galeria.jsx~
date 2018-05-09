@@ -41,7 +41,7 @@ class galeria extends React.Component{
 							this.setState({
 							datos:  res.body 
 							})	
-							console.log(res.body)
+							
 					} // FIN ELSE
 				}) // FIN .END 
 	} // FIN COMPONENT WILL MOUNT

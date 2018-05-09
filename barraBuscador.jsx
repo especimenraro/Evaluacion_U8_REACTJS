@@ -9,7 +9,7 @@ class barrabuscador extends React.Component{
     
         return(
         
-        <div className="container">
+       
 				<div className="row">
 				<div className="col-lg-12">
 				<nav className="navbar navbar-default">
@@ -31,7 +31,7 @@ class barrabuscador extends React.Component{
 				
 				</div>
 				
-				</div>
+				
               );
         } // FIN RENDER
         

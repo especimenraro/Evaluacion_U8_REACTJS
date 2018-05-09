@@ -18,13 +18,12 @@ class Catalogo extends React.Component{
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-12 ">
-								<div className="contenedor-barrasup">
 									<Barrasup/>
-								</div>
-								<div className="contenedor-barrabuscador">
-									<Barrabuscador/>
-								</div>
-								<div className="contenedor-catalogo">
+							</div>
+							<div className="col-lg-12">
+								<Barrabuscador/>
+							</div>
+								<div className="col-lg-12">
 									<Switch>
 				               	<Route exact path='/catalogo' component={Galeria} />
 				               	<Route path='/catalogo/carrito' component={Carrito} />
@@ -33,7 +32,7 @@ class Catalogo extends React.Component{
 								</div>
 							</div>
 						</div>	
-					</div>	
+					
 					
               );
         } // FIN RENDER

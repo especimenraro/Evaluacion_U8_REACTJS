@@ -54,12 +54,12 @@ class galeria extends React.Component{
     		
         return(
 					
-					<div className="container">
+					
 						<div className="row">
 							<ListaProductos bodega={this.state.datos} />
 								
 						</div>	
-					</div>	
+						
 					
               );
         } // FIN RENDER

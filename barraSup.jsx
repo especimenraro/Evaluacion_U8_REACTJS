@@ -10,8 +10,8 @@ class barrasup extends React.Component{
     
         return(
 					
-					<nav className="navbar navbar-default">
-					  <div className="container">
+					<div className="navbar navbar-default">
+					 
 					    <div className="navbar-header">
 					    
 					      <span className="navbar-brand">
@@ -24,8 +24,8 @@ class barrasup extends React.Component{
 							<li className="icono"><Link to='/catalogo/carrito'><i className="fi-shopping-cart "></i><span  className="icono">0</span></Link></li>
 							<li className="icono"><Link to='/'><i className="fi-arrow-right"></i></Link></li>
 						</ul>
-					  </div>
-				</nav>
+					  
+				</div>
 				
 				
               );
