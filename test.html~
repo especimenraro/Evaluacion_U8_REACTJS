@@ -135,8 +135,8 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6  ">
-			
-				<img  class=" center-block img-responsive thumbnail " src="./imagenesBase/ajo.jpg" alt="">
+				
+				<img  class=" center-block img-responsive thumbnail contenedor-producto-imagen " src="./imagenesBase/ajo.jpg" alt="">
 			</div>		
 			<div class="col-lg-6 contenedor-producto-info">
 				<p>Precio: ${{producto.precio}}</p>

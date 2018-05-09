@@ -24,10 +24,10 @@ class Detalle extends React.Component{
 							for (let key in this.state.datos) {
 								if (this.state.datos[key].nombre ==this.props.match.params.id ) {	
 										this.setState({producto: this.state.datos[key]}) 	
-										console.log(this.state.producto,this.props.match.params.id)	
+										
 										let urlString = this.state.producto.imagen.slice(2)
 										this.setState({url: urlString})
-										console.log(this.state.url)	
+										
 									}		
 								}
 					}

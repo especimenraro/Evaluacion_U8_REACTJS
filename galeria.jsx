@@ -24,7 +24,7 @@ function ListaProductos(props) {
 class galeria extends React.Component{
 	constructor(){
 		super()
-		this.state = {datos: [],producto: [], indice: 0	}
+		this.state = {datos: []	}
 		
 	} // FIN CONSTRUCTOR
 
@@ -41,10 +41,8 @@ class galeria extends React.Component{
 							this.setState({
 							datos:  res.body 
 							})	
-							this.setState({
-							producto:  this.state.datos[this.state.indice] 
-							})	
-					}
+							
+					} // FIN ELSE
 				}) // FIN .END 
 	} // FIN COMPONENT WILL MOUNT
 	
@@ -66,12 +64,7 @@ class galeria extends React.Component{
               );
         } // FIN RENDER
         
-        componentDidUpdate() {
-        	if ( this.state.indice<20) {
-        		let i = this.state.indice + 1
-				this.setState({indice: i})
-			}
-			} // FIN COMPONENT DID MOUNT
+        
       } // FIN CLASE
 
 export default galeria;

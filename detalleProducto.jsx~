@@ -51,7 +51,7 @@ class Detalle extends React.Component{
 							</div>
 							<div className="row">
 								<div className="col-lg-6 contenedor-producto-imagen">
-									<img className="img-responsive img-producto" src={this.state.url} alt=""/>
+									<img className="img-responsive center-block img-producto" src={this.state.url} alt=""/>
 								</div>		
 								<div className="col-lg-6 contenedor-producto-info">
 									<p>Precio:$ {this.state.producto.precio}</p>
