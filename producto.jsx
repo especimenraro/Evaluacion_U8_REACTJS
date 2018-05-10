@@ -21,7 +21,7 @@ class producto extends React.Component{
 	        } // FIN ACTUALIZA CANTIDAD
 	        
    escribirCarrito () { 
-   
+   	if (this.state.cantidad) {
 		let nombre = this.props.producto.nombre,
 							unidades = this.state.cantidad,
 							subtotal = this.state.cantidad * this.props.producto.precio,
@@ -45,7 +45,8 @@ class producto extends React.Component{
 			// FIN REQUEST				
 				
 			this.props.actualizaCantidad(unidades)
-			
+			this.props.actualizaCarrito()
+		} // FIN IF
 	} // FIN ESCRIBIR CARRITO	
 	
     render(){

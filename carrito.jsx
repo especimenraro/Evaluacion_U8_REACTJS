@@ -39,35 +39,15 @@ class carrito extends React.Component{
 	constructor(){
 		super()
 		this.state = {datos: [], total: 0}
+		this.actualizaCarrito = this.actualizaCarrito.bind(this)
 	} // FIN CONSTRUCTOR
 	
-	componentWillMount() {
-/*		
-		var subtotal = 0
-		request
-			.get('https://tienda-57b3d.firebaseio.com/usuarios/0/carrito/.json')
-			.set('Content-Type': 'application/json')
-			.end((err,res)=>{
-				if (err || !res.ok) {
-					console.log('Error en la comunicacion:' + err.message)				
-				}
-				else {
-					this.setState({
-						datos: res.body					
-					})		
-					for (let key in this.state.datos) {
-								subtotal += this.state.datos[key].subtotal			
-								
-					}
-					this.setState({total: subtotal})
-					
-				}
-			}) // FIN .END
-			*/
+	actualizaCarrito() {
+		this.props.pagar(this.props.datos)
+		
 	}
 	
-	
-    render(){
+	render(){
     
         return(
 					
@@ -94,7 +74,7 @@ class carrito extends React.Component{
 										<Link to="/catalogo" className="btn btn-danger boton-cancelar">Cancelar</Link>
 									</div>	
 									<div className="col-lg-3">
-										<button  className="btn btn-succes boton-pagar" >Pagar</button>
+										<Link to='/catalogo'  className="btn btn-success boton-pagar" onClick={this.actualizaCarrito} >Pagar</Link>
 									</div>				
 								</div>
 							</div>		

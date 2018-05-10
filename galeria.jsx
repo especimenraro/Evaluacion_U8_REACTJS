@@ -8,7 +8,7 @@ function ListaProductos(props) {
   
   							<div className="col-lg-3">
 								<div className="contenedor-galeria">
-								 <Producto producto={producto} actualizaCantidad={props.actualizaCantidad} />
+								 <Producto producto={producto} actualizaCantidad={props.actualizaCantidad} actualizaCarrito={props.actualizaCarrito} />
 									</div>
 							</div>
    
@@ -26,34 +26,15 @@ class galeria extends React.Component{
 		super()
 		this.state = {datos: []	}
 		this.actualizaCantidad = this.actualizaCantidad.bind(this)
-		
+		this.actualizaCarrito = this.actualizaCarrito.bind(this)
 	} // FIN CONSTRUCTOR
 
-	componentWillMount() {
-		/*
-			request 
-				.get('https://tienda-57b3d.firebaseio.com/bodega/.json')
-				.set('Content-Type': 'application/json')
-				.end((err,res) => {
-									
-					if (err || !res.ok) {
-						console.log('Error en la comunicacion' + err.message)
-					} else {
-												
-							this.setState({
-							datos:  res.body 
-							})	
-							
-					} // FIN ELSE
-				}) // FIN .END */
-	} // FIN COMPONENT WILL MOUNT
-	
-	componentWillUpdate(next_props,next_states) {
-		
-	}
-	
 	actualizaCantidad(unidades) {
 			this.props.actualizaCantidad(unidades)
+	}
+	
+	actualizaCarrito(){
+		this.props.actualizaCarrito()	
 	}
     render(){
     		
@@ -61,7 +42,7 @@ class galeria extends React.Component{
 					
 					
 						<div className="row">
-							<ListaProductos bodega={this.props.datos} actualizaCantidad = {this.actualizaCantidad} />
+							<ListaProductos bodega={this.props.datos} actualizaCantidad = {this.actualizaCantidad} actualizaCarrito = {this.actualizaCarrito} />
 								
 						</div>	
 						
