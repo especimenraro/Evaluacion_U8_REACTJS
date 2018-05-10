@@ -5,34 +5,20 @@ import * as request from 'superagent';
 class Detalle extends React.Component{
 	constructor(){
 		super()
-		this.state = {datos:{},producto:{}, url: ''}
+		this.state = {datos:{},producto:[], url: ''}
 	} // FIN CONSTRUCTOR
 	
 	componentWillMount() {
-			request 
-				.get('https://tienda-57b3d.firebaseio.com/bodega/.json')
-				.set('Content-Type': 'application/json')
-				.end((err,res) => {
-									
-					if (err || !res.ok) {
-						console.log('Error en la comunicacion' + err.message)
-					} else {
-												
-							this.setState({
-							datos:  res.body 
-							})	
-							for (let key in this.state.datos) {
-								if (this.state.datos[key].nombre ==this.props.match.params.id ) {	
-										this.setState({producto: this.state.datos[key]}) 	
+							for (let key in this.props.datos) {
+								if (this.props.datos[key].nombre ==this.props.rutaId.match.params.id ) {	
+										this.setState({producto: this.props.datos[key]}) 	
 										
-										let urlString = this.state.producto.imagen.slice(2)
+										let urlString = this.props.datos[key].imagen.slice(2)
 										this.setState({url: urlString})
 										
 									}		
 								}
-					}
-				}) // FIN .END 
-				
+					
 				
 	} // FIN COMPONENT WILL MOUNT
 	

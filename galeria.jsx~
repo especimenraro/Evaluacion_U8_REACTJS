@@ -52,7 +52,6 @@ class galeria extends React.Component{
 	}
 	
 	actualizaCantidad(unidades) {
-			console.log('desde galeria, unidades:', unidades)
 			this.props.actualizaCantidad(unidades)
 	}
     render(){

@@ -30,6 +30,7 @@ class galeria extends React.Component{
 	} // FIN CONSTRUCTOR
 
 	componentWillMount() {
+		/*
 			request 
 				.get('https://tienda-57b3d.firebaseio.com/bodega/.json')
 				.set('Content-Type': 'application/json')
@@ -44,7 +45,7 @@ class galeria extends React.Component{
 							})	
 							
 					} // FIN ELSE
-				}) // FIN .END 
+				}) // FIN .END */
 	} // FIN COMPONENT WILL MOUNT
 	
 	componentWillUpdate(next_props,next_states) {
@@ -60,7 +61,7 @@ class galeria extends React.Component{
 					
 					
 						<div className="row">
-							<ListaProductos bodega={this.state.datos} actualizaCantidad = {this.actualizaCantidad} />
+							<ListaProductos bodega={this.props.datos} actualizaCantidad = {this.actualizaCantidad} />
 								
 						</div>	
 						

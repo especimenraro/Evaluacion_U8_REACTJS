@@ -42,6 +42,7 @@ class carrito extends React.Component{
 	} // FIN CONSTRUCTOR
 	
 	componentWillMount() {
+/*		
 		var subtotal = 0
 		request
 			.get('https://tienda-57b3d.firebaseio.com/usuarios/0/carrito/.json')
@@ -62,6 +63,7 @@ class carrito extends React.Component{
 					
 				}
 			}) // FIN .END
+			*/
 	}
 	
 	
@@ -78,13 +80,13 @@ class carrito extends React.Component{
 							</div>		
 						</div>
 														
-						<ListaProductos carrito={this.state.datos}/>
+						<ListaProductos carrito={this.props.datos}/>
 								
 							
 							<div className="col-lg-5 col-lg-offset-1 contenedor-total">
 								<div className="row">
 									<div className="col-lg-12">
-										<h4 className="total">Total: ${this.state.total}</h4>	
+										<h4 className="total">Total: ${this.props.total}</h4>	
 									</div>				
 								</div>
 								<div className="row">
