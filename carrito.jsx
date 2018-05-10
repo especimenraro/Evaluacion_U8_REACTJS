@@ -4,8 +4,11 @@ import { Link} from 'react-router-dom';
 
 function ListaProductos(props) {
   const productos = props.carrito;
-
-  const listItems = productos.map((producto) =>
+  var template=[]
+  for (let key in productos) {
+		template.push(productos[key])  
+  }
+  const listItems = template.map((producto) =>
   
   							<div className="row">
 									<div className="col-lg-12  contenedor-producto-pedido">
@@ -35,10 +38,11 @@ function ListaProductos(props) {
 class carrito extends React.Component{
 	constructor(){
 		super()
-		this.state = {datos: []}
+		this.state = {datos: [], total: 0}
 	} // FIN CONSTRUCTOR
 	
 	componentWillMount() {
+		var subtotal = 0
 		request
 			.get('https://tienda-57b3d.firebaseio.com/usuarios/0/carrito/.json')
 			.set('Content-Type': 'application/json')
@@ -50,10 +54,17 @@ class carrito extends React.Component{
 					this.setState({
 						datos: res.body					
 					})		
+					for (let key in this.state.datos) {
+								subtotal += this.state.datos[key].subtotal			
+								
+					}
+					this.setState({total: subtotal})
 					
 				}
 			}) // FIN .END
 	}
+	
+	
     render(){
     
         return(
@@ -73,7 +84,7 @@ class carrito extends React.Component{
 							<div className="col-lg-5 col-lg-offset-1 contenedor-total">
 								<div className="row">
 									<div className="col-lg-12">
-										<h4 className="total">Total: $1000</h4>	
+										<h4 className="total">Total: ${this.state.total}</h4>	
 									</div>				
 								</div>
 								<div className="row">
@@ -81,7 +92,7 @@ class carrito extends React.Component{
 										<Link to="/catalogo" className="btn btn-danger boton-cancelar">Cancelar</Link>
 									</div>	
 									<div className="col-lg-3">
-										<button  className="btn btn-succes boton-pagar">Pagar</button>
+										<button  className="btn btn-succes boton-pagar" >Pagar</button>
 									</div>				
 								</div>
 							</div>		

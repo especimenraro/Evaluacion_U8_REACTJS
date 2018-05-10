@@ -21,11 +21,13 @@ class producto extends React.Component{
 	        } // FIN ACTUALIZA CANTIDAD
 	        
    escribirCarrito () { 
+   
 		let nombre = this.props.producto.nombre,
 							unidades = this.state.cantidad,
 							subtotal = this.state.cantidad * this.props.producto.precio,
 							imagen = this.props.producto.imagen			
 		let productoCarrito = {imagen: imagen, nombre: nombre, unidades: unidades, subtotal: subtotal }	
+		
 		request 
 				.post('https://tienda-57b3d.firebaseio.com/usuarios/0/carrito/.json')
 				.set('Content-Type': 'application/json')
@@ -40,7 +42,10 @@ class producto extends React.Component{
 					 }
 				
 				}) // FIN .END
-
+			// FIN REQUEST				
+				
+			this.props.actualizaCantidad(unidades)
+			
 	} // FIN ESCRIBIR CARRITO	
 	
     render(){

@@ -8,7 +8,7 @@ function ListaProductos(props) {
   
   							<div className="col-lg-3">
 								<div className="contenedor-galeria">
-								 <Producto producto={producto} />
+								 <Producto producto={producto} actualizaCantidad={props.actualizaCantidad} />
 									</div>
 							</div>
    
@@ -25,6 +25,7 @@ class galeria extends React.Component{
 	constructor(){
 		super()
 		this.state = {datos: []	}
+		this.actualizaCantidad = this.actualizaCantidad.bind(this)
 		
 	} // FIN CONSTRUCTOR
 
@@ -49,14 +50,17 @@ class galeria extends React.Component{
 	componentWillUpdate(next_props,next_states) {
 		
 	}
-
+	
+	actualizaCantidad(unidades) {
+			this.props.actualizaCantidad(unidades)
+	}
     render(){
     		
         return(
 					
 					
 						<div className="row">
-							<ListaProductos bodega={this.state.datos} />
+							<ListaProductos bodega={this.state.datos} actualizaCantidad = {this.actualizaCantidad} />
 								
 						</div>	
 						
