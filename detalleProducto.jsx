@@ -22,7 +22,7 @@ class Detalle extends React.Component{
 				
 	} // FIN COMPONENT WILL MOUNT
 	
-    render(){
+	render(){
     
         return(
 					

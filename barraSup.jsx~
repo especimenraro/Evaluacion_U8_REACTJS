@@ -12,7 +12,7 @@ class barrasup extends React.Component{
 	
 		
     render(){
-    console.log('render')
+    
         return(
 					
 					<div className="navbar navbar-default">

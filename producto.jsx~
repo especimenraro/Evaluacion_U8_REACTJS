@@ -15,13 +15,20 @@ class producto extends React.Component{
 		let url = '/catalogo/detalle/' +  this.props.producto.nombre
 		this.setState({ruta: url})	
 	}
-
+	shouldComponentUpdate(next_props,next_states) {
+		
+		if (next_props.producto.nombre != this.state.ruta.substr(18)) {
+			let url = '/catalogo/detalle/' + next_props.producto.nombre
+			this.setState({ruta: url})
+		}
+		return true
+	}
 	actualizaCantidad(event)  {
 					this.setState({cantidad: event.target.value})        
 	        } // FIN ACTUALIZA CANTIDAD
 	        
    escribirCarrito () { 
-   
+   	if (this.state.cantidad) {
 		let nombre = this.props.producto.nombre,
 							unidades = this.state.cantidad,
 							subtotal = this.state.cantidad * this.props.producto.precio,
@@ -38,18 +45,20 @@ class producto extends React.Component{
 					 if (err || !res.ok) {
 						console.log('Error en la escritura', err)							 
 					 } else {
-						console.log('Escritura correcta')							 
+						console.log('Escritura correcta')
+						this.props.actualizaCantidad(unidades)
+						this.props.actualizaCarrito()							 
 					 }
 				
 				}) // FIN .END
 			// FIN REQUEST				
 				
-			this.props.actualizaCantidad(unidades)
-			this.props.actualizaCarrito()
+			
+		} // FIN IF
 	} // FIN ESCRIBIR CARRITO	
 	
     render(){
-    
+    	
         return(
 					
 					<div className="container contenedor-producto" >

@@ -13,7 +13,7 @@ class Detalle extends React.Component{
 								if (this.props.datos[key].nombre ==this.props.rutaId.match.params.id ) {	
 										this.setState({producto: this.props.datos[key]}) 	
 										
-										let urlString = this.state.producto.imagen.slice(2)
+										let urlString = this.props.datos[key].imagen.slice(2)
 										this.setState({url: urlString})
 										
 									}		
@@ -21,6 +21,11 @@ class Detalle extends React.Component{
 					
 				
 	} // FIN COMPONENT WILL MOUNT
+	
+	shouldComponentUpdate(){
+	return true
+	
+	}
 	
     render(){
     

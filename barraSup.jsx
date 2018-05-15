@@ -27,7 +27,7 @@ class barrasup extends React.Component{
 					    <ul className="nav navbar-nav navbar-right">
 							<li className="icono"><Link to='/catalogo' ><i className="fi-thumbnails"></i></Link></li>
 							<li className="icono"><Link to='/catalogo/carrito'><i className="fi-shopping-cart "></i><span  className="icono" id="icono-cantidad">{this.props.cantidad}</span></Link></li>
-							<li className="icono"><Link to='/'><i className="fi-arrow-right"></i></Link></li>
+							<li className="icono"><Link to='/' onClick={this.props.logout}><i className="fi-arrow-right"></i></Link></li>
 						</ul>
 					  
 				</div>
