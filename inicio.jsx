@@ -58,7 +58,7 @@ class inicio extends React.Component{
 					        <div className="form-group">
 			              	<div className="row">
 									<div className=" col-lg-offset-5 col-lg-2">
-										 <button className="btn btn-default" type="button" onClick={this.verificaLogin}>Enviar</button>
+										 <button className="btn btn-default" type="submit" onClick={this.verificaLogin}>Enviar</button>
 									</div>              	
 			              	</div>
 			               </div>

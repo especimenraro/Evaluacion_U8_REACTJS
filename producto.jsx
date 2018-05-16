@@ -29,7 +29,7 @@ class producto extends React.Component{
 	        
    escribirCarrito () { 
    	if (this.state.cantidad) {
-   		if (this.state.cantidad<=this.props.producto.disponible) {
+   		if (1*this.state.cantidad<=1*this.props.producto.disponible) {
 		let nombre = this.props.producto.nombre,
 							unidades = this.state.cantidad,
 							subtotal = this.state.cantidad * this.props.producto.precio,
@@ -65,10 +65,10 @@ class producto extends React.Component{
     	
         return(
 					
-					<div className="container contenedor-producto" >
+					<div className="contenedor-producto" >
 						<div className="row">
 							<div className="col-lg-12">
-								<img  className=" center-block imagen-producto" src={this.props.producto.imagen} alt=""/>
+								<img  className="img-responsive center-block imagen-producto" src={this.props.producto.imagen} alt=""/>
 							</div>
 						</div>
 						<div className="row">

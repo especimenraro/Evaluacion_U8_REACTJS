@@ -29,29 +29,6 @@ class galeria extends React.Component{
 		this.actualizaCarrito = this.actualizaCarrito.bind(this)
 	} // FIN CONSTRUCTOR
 
-	componentWillMount() {
-		/*
-			request 
-				.get('https://tienda-57b3d.firebaseio.com/bodega/.json')
-				.set('Content-Type': 'application/json')
-				.end((err,res) => {
-									
-					if (err || !res.ok) {
-						console.log('Error en la comunicacion' + err.message)
-					} else {
-												
-							this.setState({
-							datos:  res.body 
-							})	
-							
-					} // FIN ELSE
-				}) // FIN .END */
-	} // FIN COMPONENT WILL MOUNT
-	
-	componentWillUpdate(next_props,next_states) {
-		
-	}
-	
 	actualizaCantidad(unidades) {
 			this.props.actualizaCantidad(unidades)
 	}

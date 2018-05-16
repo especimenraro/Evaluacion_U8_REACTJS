@@ -10,7 +10,7 @@ function ListaProductos(props) {
   }
   const listItems = template.map((producto) =>
   
-  							<div className="row">
+  							
 									<div className="col-lg-12  contenedor-producto-pedido">
 										<div className="row">
 											<div className="col-lg-3 contenedor-imagen-pedido">
@@ -27,7 +27,7 @@ function ListaProductos(props) {
 											</div>		
 										</div>	
 									</div>
-								</div>
+							
       
   );
   return (
@@ -51,7 +51,7 @@ class carrito extends React.Component{
     
         return(
 					
-				<div className="container">
+				
 					<div className="row">
 					<div className="col-lg-12 contenedor-carrito">
 						<div className="row">
@@ -59,11 +59,12 @@ class carrito extends React.Component{
 								<h2>Carrito de compras</h2>
 							</div>		
 						</div>
-														
+						<div className="row">			
+							<div className='col-lg-7'>					
 						<ListaProductos carrito={this.props.datos}/>
-								
+							</div>
 							
-							<div className="col-lg-5 col-lg-offset-1 contenedor-total">
+							<div className="col-lg-4 col-lg-offset-1 contenedor-total">
 								<div className="row">
 									<div className="col-lg-12">
 										<h4 className="total">Total: ${this.props.total}</h4>	
@@ -78,10 +79,10 @@ class carrito extends React.Component{
 									</div>				
 								</div>
 							</div>		
-							
+							</div>
 						</div>	
 					</div>
-				</div>
+				
 				
 					
               );

@@ -42,8 +42,9 @@ class galeria extends React.Component{
 					
 					
 						<div className="row">
-							<ListaProductos bodega={this.props.datos} actualizaCantidad = {this.actualizaCantidad} actualizaCarrito = {this.actualizaCarrito} />
-								
+							
+								<ListaProductos bodega={this.props.datos} actualizaCantidad = {this.actualizaCantidad} actualizaCarrito = {this.actualizaCarrito} />
+							
 						</div>	
 						
 					
